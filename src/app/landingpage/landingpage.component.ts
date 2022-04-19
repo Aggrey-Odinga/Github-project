@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProfileService } from '../profile.service';
+import { ProfileService } from '../services/profile.service';
 
 @Component({
   selector: 'app-landingpage',
@@ -17,13 +17,10 @@ export class LandingpageComponent implements OnInit {
   findProfile(){
     this.profileService.updateProfile(this.username);
     this.profileService.getProfileInfo().subscribe(profile => {
-      console.log(profile);
       this.profile = profile;
     });
-
       	this.profileService.getProfileRepos().subscribe(repositories => {
-  		console.log(repositories);
-  		this.repositories = repositories;
+  			this.repositories = repositories;
   	}) 
   }
 
