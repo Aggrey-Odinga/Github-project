@@ -8,6 +8,10 @@ import { ProfileService } from '../profile.service';
 })
 export class LandingpageComponent implements OnInit {
 
+  profile: any;
+  repositories: any;
+  username!:string;
+
   constructor() { }
 
   ngOnInit(): void {
