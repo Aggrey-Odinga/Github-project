@@ -19,8 +19,15 @@ export class LandingpageComponent implements OnInit {
     this.profileService.getProfileInfo().subscribe(profile => {
       console.log(profile);
       this.profile = profile;
-    })
+    });
+
+      	this.profileService.getProfileRepos().subscribe(repositories => {
+  		console.log(repositories);
+  		this.repositories = repositories;
+  	}) 
   }
+
+  
 
   ngOnInit(): void {
   }
