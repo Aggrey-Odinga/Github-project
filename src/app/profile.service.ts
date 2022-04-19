@@ -7,7 +7,9 @@ import {HttpClient , HttpHeaders} from '@angular/common/http';
 })
 export class ProfileService {
 
- 
+  private username: string;
+  private clientid: ''; 
+  private clientsecret:'';
 
   constructor(private http:HttpClient) { }
 }
