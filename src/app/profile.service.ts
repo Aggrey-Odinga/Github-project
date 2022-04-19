@@ -6,6 +6,9 @@ import {HttpClient , HttpHeaders} from '@angular/common/http';
   providedIn: 'root'
 })
 export class ProfileService {
+  updateProfile(username: string) {
+    throw new Error('Method not implemented.');
+  }
 
   private username: string;
   private clientid!: '8c97c13b750e1df8a66a'; 
