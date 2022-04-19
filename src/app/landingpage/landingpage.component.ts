@@ -14,13 +14,13 @@ export class LandingpageComponent implements OnInit {
 
   constructor(private profileService : ProfileService) { }
 
-  // findProfile(){
-  //   this.profileService.updateProfile(this.username);
-  //   this.profileService.getProfileInfo().subscribe(profile => {
-  //     console.log(profile);
-  //     this.profile = profile;
-  //   })
-  // }
+  findProfile(){
+    this.profileService.updateProfile(this.username);
+    this.profileService.getProfileInfo().subscribe(profile => {
+      console.log(profile);
+      this.profile = profile;
+    })
+  }
 
   ngOnInit(): void {
   }
